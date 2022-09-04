@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Screen Recorder</title>
+	
+	<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+	rel="stylesheet"/>
+</head>
+<body class="bg-gray-800 text-white">
+	
+	<div class="alert alert-primary text-center" role="alert">
+		Best Screen Recorder Ever...
+	  </div>
+
+	<main class="overflow-hidden">
+		<div class="container">
+			<p class="text-info text-center">
+				Record your screen
+			</p>
+
+			<div class="container d-flex align-items-center flex-column">
+				<video src="" class="video-feedback"  height="70%" width="70%" autoplay controls></video>
+				<div class="d-flex justify-content-center my-4">
+					<button class="start-recording btn btn-outline-success mx-3">
+						Record Screen
+					</button>
+					<button class="stop-recording btn btn-outline-danger" disabled>
+						Stop Recording
+					</button>
+				</div>
+			</div>
+
+
+			<div class="recorded-video-wrap d-none">
+				<p class="text-info text-center mt-5">
+					Download recorded video
+				</p>
+
+				<div class="container d-flex align-items-center flex-column">
+					<video src="" class="recorded-video" height="70%" width="70%" autoplay controls></video>
+					<div class="d-flex justify-content-center my-4">
+						<a class="download-video btn btn-outline-info mx-3" disabled>
+							Download
+						</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+	<script
+	src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+	integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+	crossorigin="anonymous"
+  ></script>
+	<script src="./main.js"></script>
+</body>
+</html>
