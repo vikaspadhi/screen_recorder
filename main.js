@@ -9,9 +9,11 @@ let stream = null,
 	recordedVideo = null;
 
 async function setupStream () {
+	
 	try {
 		stream = await navigator.mediaDevices.getDisplayMedia({
-			video: true
+			video: true,
+			audio:true,
 		});
 
 		audio = await navigator.mediaDevices.getUserMedia({
@@ -20,6 +22,7 @@ async function setupStream () {
 				noiseSuppression: true,
 				sampleRate: 44100,
 			},
+			
 		});
 
 		setupVideoFeedback();
@@ -40,7 +43,6 @@ function setupVideoFeedback() {
 
 async function startRecording () {
 	await setupStream();
-
 	if (stream && audio) {
 		mixedStream = new MediaStream([...stream.getTracks(), ...audio.getTracks()]);
 		recorder = new MediaRecorder(mixedStream);
